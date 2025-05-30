@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineMood AI - Filmu Ieteikumi</title>
+    <!-- Add Playfair Display font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style_chat.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <!-- Aplikācijas virsraksts -->
+      <div class="header">
+        <a href="index.html">
+          <img
+            src="Cinemood_ok.png"
+            alt="CineMood AI Logo"
+            style="height: 60px; margin-bottom: 8px"
+          />
+        </a>
+        <p>Pastāsti, kā jūties, un es ieteikšu ideālās filmas!</p>
+      </div>
+
+      <!-- Čata sadaļa -->
+      <div class="chat-container">
+        <div class="messages" id="messages">
+          <!-- Sveiciena ziņojums -->
+          <div class="message ai-message">
+            <strong>🤖 CineMood AI:</strong><br />
+            Sveiki! Es esmu jūsu personīgais filmu ieteicējs. Pastāstiet man par
+            savu noskaņojumu, jūtām vai to, ko gribat skatīties, un es ieteikšu
+            perfektās filmas!
+            <br /><br />
+            Piemēram: "Jūtos skumji un ir vakars" vai "Gribu kaut ko aizraujošu
+            un piedzīvojumu pilnu!"
+          </div>
+        </div>
+
+        <!-- Ziņojuma ievades lauks -->
+        <div class="input-container">
+          <input
+            type="text"
+            class="message-input"
+            id="messageInput"
+            placeholder="Pastāstiet par savu noskaņojumu vai to, ko gribat skatīties..."
+            maxlength="500"
+          />
+          <button
+            class="send-button"
+            id="sendButton"
+            onclick="sendMessage()"
+            aria-label="Sūtīt"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              style="vertical-align: middle; transform: rotate(45deg)"
+            >
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
+    <script src="chat_script.js"></script>
+  </body>
+</html>
